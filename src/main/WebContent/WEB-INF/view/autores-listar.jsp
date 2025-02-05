@@ -11,6 +11,9 @@
 <body>
 
 <h1> Autores </h1>
+
+	<button onClick="window.location.href='/ismac-libreria-web/autores/findOne?opcion=1'; return false;">Agregar</button>
+	
 	<table>
 		<thead>
 			<tr>
@@ -21,6 +24,7 @@
 				<th>direccion</th>
 				<th>telefono</th>
 				<th>correo</th>
+				<th>Acciones</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -33,6 +37,10 @@
 					<td>${item.direccion}</td>
 					<td>${item.telefono}</td>
 					<td>${item.correo}</td>		
+					<td>
+						<button onClick="window.location.href='/ismac-libreria-web/autores/findOne?opcion=1&idAutor=${item.idAutor}'">Actualizar</button>
+						<button onClick="window.location.href='/ismac-libreria-web/autores/findOne?opcion=2&idAutor=${item.idAutor}'">Borrar</button>
+					</td>
 				</tr>
 			</c:forEach>
 			
